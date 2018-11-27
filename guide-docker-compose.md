@@ -11,6 +11,19 @@ Step 1 — configer netplan to conect with putty:
    - etc/netplan$ sudo netplan appely
    - $ ip a  (ipv4 adres zoeken om met te conecteren)
    )
+   
+   debian:(
+   - $ cd /etc/network
+   - cd /etc/network$ sudo nano interfaces
+         auto enp0s3
+         allow-hotplug enp0s3
+         iface enp0s3 inet dhcp
+         
+         auto enp0s8
+         allow-hotplug enp0s8
+         iface enp0s8 inet dhcp
+    -    
+    (
 
 Step 2 — Installing Docker Compose:
 
