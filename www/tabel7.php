@@ -27,7 +27,7 @@
     $conn = mysqli_connect('db', 'root', 'R1234-56', "myDB");
 
 
-    $query = 'SELECT * From bmw_adres';
+    $query = 'SELECT * From shop_product';
     $result = mysqli_query($conn, $query);
 
     echo '<table class="table table-striped">';
@@ -49,6 +49,8 @@
     mysqli_close($conn);
 
     ?>
+
 	</div>
+
 </body>
 </html>
