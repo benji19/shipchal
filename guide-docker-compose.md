@@ -23,7 +23,7 @@ Step 1 — configer netplan to conect with putty:
          auto enp0s3
          allow-hotplug enp0s3
          iface enp0s3 inet dhcp
-    )
+   )
          
          
 Step 2 — Installing Docker Compose:
