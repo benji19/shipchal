@@ -19,18 +19,15 @@
 				<tr><td><a href="/tabel4.php">BMW_land</a></td></tr>
 				<tr><td><a href="/tabel5.php">Shop_categorie</a></td></tr>
 				<tr><td><a href="/tabel6.php">Shop_leverancier</a></td></tr>
+				<tr><td><a href="/tabel7.php">Shop_product</a></td></tr>
 			</table>
     <?php
 
     // Connexion et sélection de la base
-<<<<<<< HEAD
-    $conn = mysqli_connect('db', 'root', 'R1234-56', "myDb");
-=======
     $conn = mysqli_connect('db', 'user', 'R1234-56', "myDB");
->>>>>>> 798f36ade9d611dbd1a65302a691ed8a791ef225
 
 
-    $query = 'SELECT * From bmw_land';
+    $query = 'SELECT * From shop_product';
     $result = mysqli_query($conn, $query);
 
     echo '<table class="table table-striped">';

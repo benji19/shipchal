@@ -23,7 +23,11 @@
     <?php
 
     // Connexion et sélection de la base
+<<<<<<< HEAD
     $conn = mysqli_connect('db', 'root', 'R1234-56', "myDb");
+=======
+    $conn = mysqli_connect('db', 'user', 'R1234-56', "myDB");
+>>>>>>> 798f36ade9d611dbd1a65302a691ed8a791ef225
 
 
     $query = 'SELECT * From shop_leverancier';
