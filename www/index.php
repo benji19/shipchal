@@ -13,13 +13,13 @@
     <div class="container">
     <?php echo "<h1>Welome to my database :D</h1>"; ?>
 		<table>
-			<tr><td><a href="http://192.168.56.5:8001/index.php">BMW_adres</a></td></tr>
-			<tr><td><a href="http://192.168.56.5:8001/tabel2.php">BMW_auto</a></td></tr>
-			<tr><td><a href="http://192.168.56.5:8001/tabel3.php">BMW_info</a></td></tr>
-			<tr><td><a href="http://192.168.56.5:8001/tabel4.php">BMW_land</a></td></tr>
-			<tr><td><a href="http://192.168.56.5:8001/tabel5.php">Shop_categorie</a></td></tr>
-			<tr><td><a href="http://192.168.56.5:8001/tabel6.php">Shop_leverancier</a></td></tr>
-			<tr><td><a href="http://192.168.56.5:8001/tabel7.php">Shop_product</a></td></tr>
+			<tr><td><a href="/index.php">BMW_adres</a></td></tr>
+			<tr><td><a href="/tabel2.php">BMW_auto</a></td></tr>
+			<tr><td><a href="/tabel3.php">BMW_info</a></td></tr>
+			<tr><td><a href="/tabel4.php">BMW_land</a></td></tr>
+			<tr><td><a href="/tabel5.php">Shop_categorie</a></td></tr>
+			<tr><td><a href="/tabel6.php">Shop_leverancier</a></td></tr>
+			<tr><td><a href="/tabel7.php">Shop_product</a></td></tr>
 		</table>
     <?php
 
