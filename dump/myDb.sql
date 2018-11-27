@@ -325,15 +325,15 @@ INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
   beschrijving text COLLATE utf8mb4_unicode_ci ) ENGINE=InnoDB
 AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO shop_categorie (id, naam, beschrijving) VALUES 
-(1,'Dranken', 'Frisdranken, koffie, thee, donker en licht bier'), 
-(2,'Kruiden', 'Zoete en hartige sausen, smaakmakers, spreads en specerijen'), 
+INSERT INTO shop_categorie (id, naam, beschrijving) VALUES
+(1,'Dranken', 'Frisdranken, koffie, thee, donker en licht bier'),
+(2,'Kruiden', 'Zoete en hartige sausen, smaakmakers, spreads en specerijen'),
 (3, 'Zoetwaren', 'Desserts en snoep'),
-(4, 'Zuivel','Kaas'), 
+(4, 'Zuivel','Kaas'),
 (5, 'Graanprodukten', 'Brood, crackers, pasta en andere graanprodukten'),
 (6, 'Vlees', 'Vleesprodukten'),
 (7, 'Fruit', 'Gedroogd fruit en tahoe'),
-(8, 'Vis', 'Zeewier en vis'); 
+(8, 'Vis', 'Zeewier en vis');
 
 CREATE TABLE shop_leverancier (
   id int(11) NOT NULL,
@@ -342,12 +342,13 @@ CREATE TABLE shop_leverancier (
   land varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   sinds date DEFAULT NULL ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT
 CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci; INSERT INTO shop_leverancier
-(id, bedrijf, adres, land, sinds) VALUES 
+(id, bedrijf, adres, land, sinds) VALUES
 (1, 'Exotic Liquids', '49 Gilbert St., London EC14SD', 'Ver. Koninkrijk', '2005-09-10'),
 (2, 'New Orleans Cajun delights', 'P.O. Box 78934, New Orleans 70117', 'Ver. Staten', '2005-04-22'),
 (3, 'Grandma Kelly''s Homestead', '707 Oxford Rd., Ann Arbor 48104', 'Ver. Staten', '2004-09-17'),
 (4, 'Tokyo Traders', '9-8 Sekimai, Tokyo 100', 'Japan', '2008-09-10'),
-(5,'Cooperativa de Quesos ''Las Cabras''', 'Calle del Rosal 4, Oviedo 33007', 'Spanje', '2005-07-25'), (6, 'Mayumi''s', '92 Setsuko, Osaka 545', 'Japan', '2001-09-11'),
+(5,'Cooperativa de Quesos ''Las Cabras''', 'Calle del Rosal 4, Oviedo 33007', 'Spanje', '2005-07-25'),
+(6, 'Mayumi''s', '92 Setsuko, Osaka 545', 'Japan', '2001-09-11'),
 (7, 'Pavlova, Ltd.', '74 Rose St., Melbourne 3058', 'Australië', '2011-07-11'),
 (8, 'Specially Biscuits, Ltd.', '29 King''s Way, Manchester M14 GSD', 'Ver. Koninkrijk', '2004-09-10'),
 (9, 'PB Knäckbrod AB', 'Kaloadagatan 13, Göteborg S-34567', 'Zweden', '2001-09-10'),
@@ -357,7 +358,7 @@ CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci; INSERT INTO shop_leverancier
 (13, 'Nord-Ost-Fisch Handelsgesellschaft mbH', 'Frahmredder 112a, Cuxhaven 27478', 'Duitsland', '2001-09-10'),
 (14, 'Formaggi Forntine s.r.l.', 'Viale Dante 75, Ravenna 48100', 'Italië', '2005-01-18'),
 (15, 'Norske Meierier', 'Hatlevegen 5, Sandvika 1320', 'Noorwegen', '2003-08-16'),
-(16, 'Bigfoot Breweries', '3400 - 8th Avenue, Bend 97101', 'Ver. Staten', '2010-05-05'); 
+(16, 'Bigfoot Breweries', '3400 - 8th Avenue, Bend 97101', 'Ver. Staten', '2010-05-05');
 
 
  /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

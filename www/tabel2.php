@@ -19,12 +19,11 @@
 				<tr><td><a href="/tabel4.php">BMW_land</a></td></tr>
 				<tr><td><a href="/tabel5.php">Shop_categorie</a></td></tr>
 				<tr><td><a href="/tabel6.php">Shop_leverancier</a></td></tr>
-				<tr><td><a href="/tabel7.php">Shop_product</a></td></tr>
 			</table>
 			<?php
 
 				// Connexion et sélection de la base
-				$conn = mysqli_connect('db', 'root', 'R1234-56', "myDB");
+				$conn = mysqli_connect('db', 'root', 'R1234-56', "myDb");
 
 
 				$query = 'SELECT * From bmw_auto';
