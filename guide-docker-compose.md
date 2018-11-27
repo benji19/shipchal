@@ -8,6 +8,20 @@ Step 1 — configer netplan to conect with putty:
    - etc/netplan$ cp 50*.yaml 99.yaml
    - etc/netplan$ sudo nano 99.yaml
       voog een poort toe door de bestaan de regels te copyeren en de adaptor naam teveranderen (vb enp0s3 => enp0s8)
+      
+         network:
+             ethernets:
+                 enp0s3:
+                     addresses: []
+                     dhcp4: true
+                 enp0s8:
+                     addresses: []
+                     dhcp4: true
+                     nameservers:
+                         addresses: []
+                         search: []
+          version: 2
+       
    - etc/netplan$ sudo netplan appely
    - $ ip a  (ipv4 adres zoeken om met te conecteren)
    )
