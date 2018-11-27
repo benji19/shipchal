@@ -31,5 +31,5 @@ Step 5 — surf in a browser
 
    surf naar je localhost/ip addres van je server met volgende poorten
       - :8010  www            (voor het tonen van de website waar gegevens verwerkt worden)
-      - :8011  phpmyadmin     (voor de het beheren van de database)
-      - :9010  portainer      (voor het manage van containers en images van docker)
+      - :8011  phpmyadmin  user: root  wachtwoord: R1234-56  (voor de het beheren van de database)
+      - :9010  portainer   user: root  wachtwoord: R1234-56  (voor het manage van containers en images van docker)
