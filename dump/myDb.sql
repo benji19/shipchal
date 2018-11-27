@@ -2,23 +2,27 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
- /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
- /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
- /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
- /*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 
 CREATE TABLE `Person` (
-   `id` int(11) NOT NULL,
-   `id2` int(11) NOT NULL,
-   `name` varchar(20) NOT NULL
- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
- INSERT INTO `Person` (`id`, `id2`, `name`) VALUES
- (1, 5, 'William'),
- (2, 6, 'Marc'),
- (5, 8, 'Benji'),
- (4, 7, 'Maarten'),
- (3, 7, 'John');
+  `id2` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `Person` (`id2`,`id`, `name`) VALUES
+(7,0, 'Jansens'),
+(6,1, 'William'),
+(5,2, 'Marc'),
+(4,3, 'Johnnn'),
+(3,4, 'Willy'),
+(2,5, 'Ruben'),
+(1,6, 'Benji');
 
 CREATE TABLE bmw_adres (
   id int(10) unsigned NOT NULL,
@@ -66,6 +70,7 @@ INSERT INTO bmw_auto (id, auto, serie, achtergrond, foto, opmerking) VALUES
 (10, '5 Series sedan', 'The BMW 5 Series', 'logos/5.gif', 'autos/5sedan.jpg', 'Progress is a story of continuous change: From Marconi’s first radio transmission to global high-speed satellite communication. From the first computers, as big as a house, to portable laptops with cordless Internet access. From the car , designed as a simple means of transport, to the BMW 5 Series sedan, designed to forever change the way you feel about driving.'),
 (11, '5 Series touring', 'The BMW 5 Series', 'logos/5.gif', 'autos/5touring.jpg', 'It may look like a wagon, albeit a very handsome one, but under the skin of the 5 Series touring beats the heart of a sports car. With its smooth, powerful engines and much-lauded chassis, the touring is every bit as entertaining as its sedan cousin. In fact, it''s only when you look in your rear-view mirror that you''re reminded of the car''s carrying capacity. A weekend at the beach, or an important business appointment: the BMW 5 Series touring is a car that feels confidently at home wherever you drive it.');
 
+
 CREATE TABLE bmw_info (
   id int(10) unsigned NOT NULL,
   naam varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -76,6 +81,7 @@ CREATE TABLE bmw_info (
   auto varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   datum date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 CREATE TABLE bmw_land (
   id int(10) unsigned NOT NULL,
@@ -278,88 +284,30 @@ INSERT INTO bmw_land (id, land) VALUES
 (193, 'Zambia'),
 (194, 'Zimbabwe');
 
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Jef Verboven', 'Jv@telenet.be', 'Pas 20', '2440 Geel', 'Belgium', '2', '2016-10-01');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Jan Mols', 'Jm@ping.be', 'Nieuwstraat 34', '2400 Mol', 'Belgium', '1', '2016-09-01');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Pieter Pals', 'Pp@gmail.com', 'Stationsstraat 56', '3000 Leuven', 'Belgium', '2', '2016-08-01');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Koen Boven', 'Koen@hotmail.com', 'Kerkstraat 5', '2440 Geel', 'Belgium', '3', '2016-10-11');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Ann Fransen', 'Ann@ping.be', 'Gasthuisstraat 19', '2400 Mol', 'Belgium', '10', '2016-10-03');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Wouter Peeters', 'Wouterw@gmail.com', 'Laar 100', '2460 Kasterlee', 'Belgium', '5', '2011-10-01');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Hendrik Pieters', 'Hendrik@telenet.be', 'Nieuwstraat 34', '2440 Geel', 'Belgium', '7', '2016-09-01');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Els Wauters', 'EW@telenet.be', 'Stationsstraat 56', '3000 Leuven', 'Belgium', '5', '2016-07-01');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Hugo Wouters', 'Hugo@hotmail.com', 'Kerkstraat 5', '2460 Kasterlee', 'Belgium', '3', '2016-08-08');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Leo Peetermans', 'Leo@gmail.com', 'Laar 100', '2400 Mol', 'Belgium', '7', '2016-07-09');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Quinten Vandeperre', 'WQS@telenet.be', 'Gasthuisstraat 19', '2440 Geel', 'Belgium', '2', '2011-11-01');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Xavier Stevens', 'Xxx@ping.be', 'Nieuwstraat 34', '3000 Leuven', 'Belgium', '1', '2016-05-12');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Jef Beke', 'Jef.Beke@hotmail.com', 'Stationsstraat 56', '2460 Kasterlee', 'Belgium', '10', '2016-10-13');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Jan Verhesen', 'Jantje@gmail.com', 'Kerkstraat 5', '2400 Mol', 'Belgium', '8', '2016-09-01');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Piet Mols', 'Piet.Mols@telenet.be', 'Laar 100', '2460 Kasterlee', 'Belgium', '9', '2016-08-01');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Gerard Puts', 'GP@hotmail.com', 'Kerkstraat 5', '2460 Kasterlee', 'Belgium', '2', '2016-10-01');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Jan Beneens', 'Janneke@ping.be', 'Nieuwstraat 34', '3000 Leuven', 'Belgium', '1', '2016-10-05');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Maria Laenen', 'Maria.Laenen@gmail.com', 'Stationsstraat 56', '2440 Geel', 'Belgium', '5', '2016-10-06');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Jef Alen', 'Jef.Alen@gmail.com', 'Gasthuisstraat 19', '3000 Leuven', 'Belgium', '5', '2016-04-01');
-INSERT INTO bmw_info (naam, email, straat, plaats, land, auto, datum) VALUES
-('Jef Verboven', 'Jv@ping.be', 'Pas 20', '2440 Geel', 'Belgium', '2', '2016-10-01');
 
- CREATE TABLE shop_categorie (
-  id int(11) NOT NULL,
-  naam varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  beschrijving text COLLATE utf8mb4_unicode_ci ) ENGINE=InnoDB
-AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- ALTER TABLE bmw_adres
+--   ADD PRIMARY KEY (id);
 
-INSERT INTO shop_categorie (id, naam, beschrijving) VALUES 
-(1,'Dranken', 'Frisdranken, koffie, thee, donker en licht bier'), 
-(2,'Kruiden', 'Zoete en hartige sausen, smaakmakers, spreads en specerijen'), 
-(3, 'Zoetwaren', 'Desserts en snoep'),
-(4, 'Zuivel','Kaas'), 
-(5, 'Graanprodukten', 'Brood, crackers, pasta en andere graanprodukten'),
-(6, 'Vlees', 'Vleesprodukten'),
-(7, 'Fruit', 'Gedroogd fruit en tahoe'),
-(8, 'Vis', 'Zeewier en vis'); 
+-- ALTER TABLE bmw_auto
+--   ADD PRIMARY KEY (id);
 
-CREATE TABLE shop_leverancier (
-  id int(11) NOT NULL,
-  bedrijf varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  adres varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  land varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  sinds date DEFAULT NULL ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT
-CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci; INSERT INTO shop_leverancier
-(id, bedrijf, adres, land, sinds) VALUES 
-(1, 'Exotic Liquids', '49 Gilbert St., London EC14SD', 'Ver. Koninkrijk', '2005-09-10'),
-(2, 'New Orleans Cajun delights', 'P.O. Box 78934, New Orleans 70117', 'Ver. Staten', '2005-04-22'),
-(3, 'Grandma Kelly''s Homestead', '707 Oxford Rd., Ann Arbor 48104', 'Ver. Staten', '2004-09-17'),
-(4, 'Tokyo Traders', '9-8 Sekimai, Tokyo 100', 'Japan', '2008-09-10'),
-(5,'Cooperativa de Quesos ''Las Cabras''', 'Calle del Rosal 4, Oviedo 33007', 'Spanje', '2005-07-25'), (6, 'Mayumi''s', '92 Setsuko, Osaka 545', 'Japan', '2001-09-11'),
-(7, 'Pavlova, Ltd.', '74 Rose St., Melbourne 3058', 'Australië', '2011-07-11'),
-(8, 'Specially Biscuits, Ltd.', '29 King''s Way, Manchester M14 GSD', 'Ver. Koninkrijk', '2004-09-10'),
-(9, 'PB Knäckbrod AB', 'Kaloadagatan 13, Göteborg S-34567', 'Zweden', '2001-09-10'),
-(10, 'Refrescos Americanas LTDA', 'Av. das Americanas 12, Sao Paulo 5442', 'Brazilië', '2004-12-12'),
-(11, 'Heli Susswaren GmbH & Co KG', 'Tiergartenstrasse 5, Berlijn 10785','Duitsland', '2005-12-06'),
-(12, 'Plusspar Lebensmittelgrossmärkte AG', 'Bogenallee 51, Frankfurt 60439', 'Duitsland', '2005-01-10'),
-(13, 'Nord-Ost-Fisch Handelsgesellschaft mbH', 'Frahmredder 112a, Cuxhaven 27478', 'Duitsland', '2001-09-10'),
-(14, 'Formaggi Forntine s.r.l.', 'Viale Dante 75, Ravenna 48100', 'Italië', '2005-01-18'),
-(15, 'Norske Meierier', 'Hatlevegen 5, Sandvika 1320', 'Noorwegen', '2003-08-16'),
-(16, 'Bigfoot Breweries', '3400 - 8th Avenue, Bend 97101', 'Ver. Staten', '2010-05-05'); 
+-- ALTER TABLE bmw_info
+--   ADD PRIMARY KEY (id);
+
+-- ALTER TABLE bmw_land
+--   ADD PRIMARY KEY (id);
 
 
- /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
- /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
- /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- ALTER TABLE bmw_adres
+--   MODIFY id int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+-- ALTER TABLE bmw_auto
+--   MODIFY id int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+-- ALTER TABLE bmw_info
+--   MODIFY id int(10) unsigned NOT NULL AUTO_INCREMENT;
+-- ALTER TABLE bmw_land
+--   MODIFY id int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=195;
+
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
