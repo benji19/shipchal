@@ -19,7 +19,7 @@ Step 3 — Running Docker GIT file:
    - $ mkdir docker-hub --> cd docker-hub
    - $docker-hub/ git clone https://github.com/benji19/shipchal.git
    - $docker-hub/ cd shipchal
-   - $docker-hun/shipchal/ sudo docker-compose -up -d
+   - $docker-hun/shipchal/ sudo docker-compose up -d
    
 Step 4 — testing docker containers
 
