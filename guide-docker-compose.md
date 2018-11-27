@@ -3,8 +3,9 @@ Wat heb je nodig
 
 Step 1 — Installing Docker Compose:
 
-   - sudo curl -L https://github.com/docker/compose/releases/download/1.23.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-      compose
+   - sudo curl -L https://github.com/docker/compose/releases/download/1.23.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker- compose
    - sudo chmod +x /usr/local/bin/docker-compose
+   - sudo snap install docker 
 
 Step 2 — Running a Container with Docker Compose (om te testen dat het werkt):
 
@@ -19,7 +20,7 @@ Step 3 — Running Docker GIT file:
    - $ mkdir docker-hub --> cd docker-hub
    - $docker-hub/ git clone https://github.com/benji19/shipchal.git
    - $docker-hub/ cd shipchal
-   - $docker-hun/shipchal/ sudo docker-compose up -d
+   - $docker-hub/shipchal/ sudo docker-compose up -d
    
 Step 4 — testing docker containers
 
