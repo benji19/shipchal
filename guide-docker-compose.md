@@ -15,13 +15,14 @@ Step 1 — configer netplan to conect with putty:
    debian:(
    - $ cd /etc/network
    - cd /etc/network$ sudo nano interfaces
-        auto enp0s3
-        allow-hotplug enp0s3
-        iface enp0s3 inet dhcp
+   
+         auto enp0s3
+         allow-hotplug enp0s3
+         iface enp0s3 inet dhcp
         
-        auto enp0s3
-        allow-hotplug enp0s3
-        iface enp0s3 inet dhcp
+         auto enp0s3
+         allow-hotplug enp0s3
+         iface enp0s3 inet dhcp
     )
          
          
