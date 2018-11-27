@@ -24,8 +24,7 @@ INSERT INTO `Person` (`id2`,`id`, `name`) VALUES
 (2,5, 'Ruben'),
 (1,6, 'Benji');
 
-DROP TABLE IF EXISTS bmw_adres;
-CREATE TABLE IF NOT EXISTS bmw_adres (
+CREATE TABLE bmw_adres (
   id int(10) unsigned NOT NULL,
   land varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
   naam varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -49,8 +48,7 @@ INSERT INTO bmw_adres (id, land, naam, straat, plaats, tel, fax) VALUES
 (11, 'Sweden', 'BMW Sverige AB', 'P.O. Box 1525', 'S-17129 Solna', '0046-8-7353900', '0046-8-7356063'),
 (12, 'Finland', 'Oy BMW Suomi AB', 'Tuupakantie 8-10', 'FIN - 01740 Vantaa', '0035-89-613741', '0035-89-61452');
 
-DROP TABLE IF EXISTS bmw_auto;
-CREATE TABLE IF NOT EXISTS bmw_auto (
+CREATE TABLE bmw_auto (
   id int(10) unsigned NOT NULL,
   auto varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
   serie varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -72,8 +70,8 @@ INSERT INTO bmw_auto (id, auto, serie, achtergrond, foto, opmerking) VALUES
 (10, '5 Series sedan', 'The BMW 5 Series', 'logos/5.gif', 'autos/5sedan.jpg', 'Progress is a story of continuous change: From Marconi’s first radio transmission to global high-speed satellite communication. From the first computers, as big as a house, to portable laptops with cordless Internet access. From the car , designed as a simple means of transport, to the BMW 5 Series sedan, designed to forever change the way you feel about driving.'),
 (11, '5 Series touring', 'The BMW 5 Series', 'logos/5.gif', 'autos/5touring.jpg', 'It may look like a wagon, albeit a very handsome one, but under the skin of the 5 Series touring beats the heart of a sports car. With its smooth, powerful engines and much-lauded chassis, the touring is every bit as entertaining as its sedan cousin. In fact, it''s only when you look in your rear-view mirror that you''re reminded of the car''s carrying capacity. A weekend at the beach, or an important business appointment: the BMW 5 Series touring is a car that feels confidently at home wherever you drive it.');
 
-DROP TABLE IF EXISTS bmw_info;
-CREATE TABLE IF NOT EXISTS bmw_info (
+
+CREATE TABLE bmw_info (
   id int(10) unsigned NOT NULL,
   naam varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
   email varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -84,8 +82,8 @@ CREATE TABLE IF NOT EXISTS bmw_info (
   datum date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS bmw_land;
-CREATE TABLE IF NOT EXISTS bmw_land (
+
+CREATE TABLE bmw_land (
   id int(10) unsigned NOT NULL,
   land varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=195 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -287,27 +285,27 @@ INSERT INTO bmw_land (id, land) VALUES
 (194, 'Zimbabwe');
 
 
-ALTER TABLE bmw_adres
-  ADD PRIMARY KEY (id);
+-- ALTER TABLE bmw_adres
+--   ADD PRIMARY KEY (id);
 
-ALTER TABLE bmw_auto
-  ADD PRIMARY KEY (id);
+-- ALTER TABLE bmw_auto
+--   ADD PRIMARY KEY (id);
 
-ALTER TABLE bmw_info
-  ADD PRIMARY KEY (id);
+-- ALTER TABLE bmw_info
+--   ADD PRIMARY KEY (id);
 
-ALTER TABLE bmw_land
-  ADD PRIMARY KEY (id);
+-- ALTER TABLE bmw_land
+--   ADD PRIMARY KEY (id);
 
 
-ALTER TABLE bmw_adres
-  MODIFY id int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
-ALTER TABLE bmw_auto
-  MODIFY id int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
-ALTER TABLE bmw_info
-  MODIFY id int(10) unsigned NOT NULL AUTO_INCREMENT;
-ALTER TABLE bmw_land
-  MODIFY id int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=195;
+-- ALTER TABLE bmw_adres
+--   MODIFY id int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+-- ALTER TABLE bmw_auto
+--   MODIFY id int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+-- ALTER TABLE bmw_info
+--   MODIFY id int(10) unsigned NOT NULL AUTO_INCREMENT;
+-- ALTER TABLE bmw_land
+--   MODIFY id int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=195;
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
