@@ -23,7 +23,7 @@
 			<?php
 
 				// Connexion et sélection de la base
-				$conn = mysqli_connect('db', 'user', 'R1234-56', "myDB");
+				$conn = mysqli_connect('db', 'user', 'R1234-56', "myDb");
 
 				$query = 'SELECT * From bmw_auto';
 				$result = mysqli_query($conn, $query);
