@@ -51,12 +51,12 @@ Wat heb je nodig
 
          - $ su root
          - root@user:/home/user# apt-get install sudo
-         - root@user:/home/user# adduser 'username' sudo
+         - root@user:/home/user# adduser username sudo
          - root@user:/home/user# visudo
       -user toevoegen
 
            # User privilege specification
-             newuser ALL=(ALL:ALL) ALL
+             username ALL=(ALL:ALL) ALL
       -exit naar gebruiker
 
          - root@user:/home/user# exit
@@ -117,7 +117,7 @@ Wat heb je nodig
    
 6️⃣ Step 6 — surf in a browser
 
-   surf naar je localhost/ip addres van je server met volgende poorten:
+   🌐 surf naar je localhost/ip addres van je server met volgende poorten:
    
       - :8007  www            (voor het tonen van de website waar gegevens verwerkt worden)
       - :8008  phpmyadmin  user: user  wachtwoord: R1234-56  (voor de het beheren van de database)
