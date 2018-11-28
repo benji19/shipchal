@@ -51,9 +51,17 @@ Debian:
 
       - $ su root
       - root@user:/home/user# apt-get install sudo
-      - root@user:/home/user# adduser username sudo
+      - root@user:/home/user# adduser 'username' sudo
+      - root@user:/home/user# visudo
+   lijn toevoegen
+   
+        # User privilege specification
+          newuser ALL=(ALL:ALL) ALL
+   exit naar gebruiker
+   
       - root@user:/home/user# exit
    
+      - $ apt-get install curl
       - $ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
       - $ sudo chmod +x /usr/local/bin/docker-compose
       - $ sudo apt-get install snapd
