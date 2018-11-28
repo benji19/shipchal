@@ -53,13 +53,14 @@ Debian:
       - root@user:/home/user# apt-get install sudo
       - root@user:/home/user# adduser 'username' sudo
       - root@user:/home/user# visudo
-   lijn toevoegen
+   -lijn toevoegen:
    
         # User privilege specification
           newuser ALL=(ALL:ALL) ALL
-   exit naar gebruiker
+   -exit naar gebruiker:
    
       - root@user:/home/user# exit
+   -docker:
    
       - $ apt-get install curl
       - $ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
