@@ -48,10 +48,16 @@ Ubuntu:
    - sudo snap install docker 
    
 Debian:
-   - sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-   - sudo chmod +x /usr/local/bin/docker-compose
-   - sudo apt-get install snapd
-   - sudo snap install docker 
+
+      - $ su root
+      - root@user:/home/user# apt-get install sudo
+      - root@user:/home/user# adduser username sudo
+      - root@user:/home/user# exit
+   
+      - $ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+      - $ sudo chmod +x /usr/local/bin/docker-compose
+      - $ sudo apt-get install snapd
+      - $ sudo snap install docker 
 
 Step 3 — Running a Container with Docker Compose (om te testen dat het werkt):
 
