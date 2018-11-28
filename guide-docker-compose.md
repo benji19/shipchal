@@ -5,30 +5,25 @@ Step 1 — configer netplan to conect with putty:
 
    Ubuntu:(
    - $ cd /etc/netplan
-   - etc/netplan$ cp 50*.yaml 99.yaml
-   - etc/netplan$ sudo nano 99.yaml
+   - /etc/netplan$ cp 50*.yaml 99.yaml
+   - /etc/netplan$ sudo nano 99.yaml
       voog een poort toe door de bestaan de regels te copyeren en de adaptor naam teveranderen (vb enp0s3 => enp0s8)
       
          network:
              ethernets:
                  enp0s3:
-                     addresses: []
                      dhcp4: true
                  enp0s8:
-                     addresses: []
                      dhcp4: true
-                     nameservers:
-                         addresses: []
-                         search: []
           version: 2
        
-   - etc/netplan$ sudo netplan appely
+   - /etc/netplan$ sudo netplan appely
    - $ ip a  (ipv4 adres zoeken om met te conecteren)
    )
    
    debian:(
    - $ cd /etc/network
-   - cd /etc/network$ sudo nano interfaces
+   - /etc/network$ sudo nano interfaces
    
          auto enp0s3
          allow-hotplug enp0s3
@@ -43,9 +38,10 @@ Step 1 — configer netplan to conect with putty:
 Step 2 — Installing Docker Compose:
 
 Ubuntu:
-   - sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-   - sudo chmod +x /usr/local/bin/docker-compose
-   - sudo snap install docker 
+
+      - $ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+      - $ sudo chmod +x /usr/local/bin/docker-compose
+      - $ sudo snap install docker 
    
 Debian:
 
@@ -53,43 +49,66 @@ Debian:
       - root@user:/home/user# apt-get install sudo
       - root@user:/home/user# adduser 'username' sudo
       - root@user:/home/user# visudo
-   -lijn toevoegen:
+   -user toevoegen
    
         # User privilege specification
           newuser ALL=(ALL:ALL) ALL
-   -exit naar gebruiker:
+   -exit naar gebruiker
    
       - root@user:/home/user# exit
-   -docker:
+   -docker
    
-      - $ apt-get install curl
-      - $ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-      - $ sudo chmod +x /usr/local/bin/docker-compose
+      - $ sudo apt-get update
+      
+      - $ sudo apt-get install \
+     apt-transport-https \
+     ca-certificates \
+     curl \
+     gnupg2 \
+     software-properties-common
+     
+      - $ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+      - $ sudo apt-key fingerprint 0EBFCD88
+      
+      - $ sudo add-apt-repository \
+      "deb [arch=amd64] https://download.docker.com/linux/debian \
+      $(lsb_release -cs) \
+      stable"
+      
+      - $ sudo apt-get update
+      - $ sudo apt-get install docker-ce
+      
       - $ sudo apt-get install snapd
       - $ sudo snap install docker 
 
 Step 3 — Running a Container with Docker Compose (om te testen dat het werkt):
 
-   - $ mkdir hello-world --> cd hello-world --> nano docker-compose.yml -->  
+      - $ mkdir hello-world 
+      - $ cd hello-world
+      - hello-world$ nano docker-compose.yml 
+
+            version: "2"
+               services:
+                   my-test:
+                       image: hello-world
+
+      - docker-compose up -d   (-d om het op de achtergrond uitvoeren)
+   of
    
-         version: "2"
-            services:
-                my-test:
-                    image: hello-world
-              
-   - docker-compose up -d   (-d om het op de achtergrond uitvoeren)
+      $ sudo docker run hello-world
 
 Step 4 — Running Docker GIT file:
 
-   - $ mkdir docker-hub --> cd docker-hub
-   - docker-hub$ git clone https://github.com/benji19/shipchal.git
-   - docker-hub$ cd shipchal
-   - docker-hub$ shipchal/ sudo docker-compose up -d
+      - $ mkdir docker-hub 
+      - $ cd docker-hub
+      - docker-hub$ git clone https://github.com/benji19/shipchal.git
+      - docker-hub$ cd shipchal
+      - docker-hub/shipchal$ sudo docker-compose up -d
    
 Step 5 — testing docker containers
 
-   - docker ps       (laat alle lopende containers zien)
-   - docker images   (laat gedownloade/gemaakte images zien)
+      - $ docker ps       (laat alle lopende containers zien)
+      - $ docker images   (laat gedownloade/gemaakte images zien)
    
 Step 6 — surf in a browser
 
