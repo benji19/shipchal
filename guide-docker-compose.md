@@ -22,9 +22,10 @@ Wat heb je nodig
    )
    
   💖 debian:(
-   - $ cd /etc/network
-   - /etc/network$ 
-   - root@user:~/etc/network$ nano interfaces
+  
+       - $ cd /etc/network
+       - /etc/network$ su root
+       - root@user:~/etc/network$ nano interfaces
    vervang alles onder # The primary network interface 
    
          # The primary network interface
@@ -35,9 +36,11 @@ Wat heb je nodig
          allow-hotplug enp0s8
          auto enp0s8
          iface enp0s8 inet dhcp
-   - root@user:~/etc/network$ exit
-   )
-         
+   zoek u ip addres op
+   
+        - root@user:~/etc/network$ exit
+        - $ ip a   
+   voor het eenvoudig gebruik van copy/paste verbind je nu best met putty of dergelijke via het ip adres van u hoste-only adapter
           
 2️⃣ Step 2 — Installing Docker Compose:
 
